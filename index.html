@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger Budds - Best Burgers in Mathura</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+    <!-- SEO Improvements -->
+    <meta name="description" content="Burger Budds - Best burgers in Mathura. Order signature burgers, snacks, combos online. Located at Bhuteshwar Rd, Geeta Enclave. Dine-in or WhatsApp order.">
+    <meta name="keywords" content="burger mathura, best burger mathura, burger budds, food delivery mathura, restaurant mathura, fast food mathura, veg burger, chicken burger, family restaurant">
+    <meta name="author" content="Burger Budds">
+    <meta name="geo.region" content="IN-UP">
+    <meta name="geo.placename" content="Mathura">
+    <meta name="geo.position" content="27.5005366;77.6665977">
+    <meta name="ICBM" content="27.5005366, 77.6665977">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Burger Budds - Best Burgers in Mathura">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://burgerbuddy.in">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600">
+    <meta property="og:description" content="Craving burgers? Burger Budds serves juicy burgers, fries, shakes. Order now!">
+    <meta property="og:site_name" content="Burger Budds">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Burger Budds - Mathura's Favorite">
+    <meta name="twitter:description" content="Best burgers in town. Order online.">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://burgerbuddy.in">
+    <title>Burger Budds - Best Burgers in Mathura | Online Order</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +39,7 @@
             line-height: 1.6;
         }
 
-        /* Navbar Styles - New Color: Burnt Orange/Red */
+        /* Navbar Styles */
         .navbar {
             background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
             padding: 1rem 0;
@@ -102,6 +123,36 @@
             background: #128C7E;
         }
 
+        /* Cart Icon in Navbar - Links to cart.html */
+        .cart-icon {
+            position: relative;
+            background: #FFA500;
+            padding: 8px 15px;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
         /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
@@ -116,19 +167,60 @@
             padding: 20px;
         }
 
-        /* Enhanced Header - New Background Image */
-        header {
+        /* Video Header */
+        .video-header {
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-            url("https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=1920&q=80")
-            center/cover no-repeat;
+            width: 100%;
+            height: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             text-align: center;
-            padding: 120px 20px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            overflow: hidden;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+            z-index: -1;
+        }
+
+        .video-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
             animation: fadeIn 1s ease-out;
+        }
+
+        .video-content h1 {
+            font-size: 4.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: slideInDown 1s ease-out;
+        }
+
+        .video-content p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            animation: slideInUp 1s ease-out 0.3s both;
         }
 
         @keyframes fadeIn {
@@ -136,33 +228,9 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(255,165,0,0.3), transparent 50%);
-            pointer-events: none;
-        }
-
-        header h1 {
-            font-size: 4.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            animation: slideInDown 1s ease-out;
-        }
-
         @keyframes slideInDown {
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
-        }
-
-        header p {
-            font-size: 1.4em;
-            margin-bottom: 30px;
-            animation: slideInUp 1s ease-out 0.3s both;
         }
 
         @keyframes slideInUp {
@@ -186,20 +254,10 @@
             border-radius: 50px;
             font-weight: bold;
             transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1em;
             box-shadow: 0 4px 15px rgba(255,165,0,0.3);
         }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255,165,0,0.5);
-        }
-
-        .btn-wa {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255,165,0,0.5); }
+        .btn-wa { background: linear-gradient(45deg, #25D366, #128C7E); }
 
         .section {
             background: white;
@@ -209,12 +267,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
-
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
+        .section:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
         .section h2 {
             color: #B22222;
             margin-bottom: 30px;
@@ -226,228 +279,177 @@
             gap: 10px;
         }
 
-        .section h2 i {
-            font-size: 1.2em;
-        }
-
-        /* Enhanced Menu Grid */
+        /* Menu Grid */
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
         }
-
         .menu-card {
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 12px;
             text-align: center;
             transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
             border: 1px solid #eee;
-            cursor: pointer;
+            position: relative;
         }
-
-        .menu-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,165,0,0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .menu-card:hover::before {
-            left: 100%;
-        }
-
         .menu-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(255,165,0,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255,165,0,0.2);
             border-color: #FFA500;
         }
-
         .menu-badge {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #B22222;
+            top: 8px; right: 8px;
+            background: #B22222; color: white;
+            padding: 4px 12px; border-radius: 20px;
+            font-size: 0.75rem; font-weight: bold;
+        }
+        .menu-icon { font-size: 3.5em; color: #B22222; margin-bottom: 10px; }
+        .menu-card h3 { color: #333; margin-bottom: 8px; font-size: 1.3em; }
+        .menu-desc { color: #666; margin-bottom: 12px; min-height: 50px; font-size: 0.9em; }
+        .menu-price { font-size: 1.6em; color: #B22222; font-weight: bold; margin: 10px 0; }
+        
+        .add-to-cart-btn {
+            background: linear-gradient(45deg, #FFA500, #FF8C00);
+            color: white; border: none; padding: 10px 20px; border-radius: 50px;
+            cursor: pointer; font-weight: bold; transition: all 0.3s; width: 100%;
+            font-size: 1em; display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        
+        .add-to-cart-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(255,165,0,0.4);
+        }
+        
+        .toast-message {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4CAF50;
             color: white;
-            padding: 5px 15px;
-            border-radius: 25px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .menu-icon {
-            font-size: 4em;
-            color: #B22222;
-            margin-bottom: 15px;
-        }
-
-        .menu-card h3 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
-
-        .menu-desc {
-            color: #666;
-            margin-bottom: 15px;
-            min-height: 60px;
-        }
-
-        .menu-price {
-            font-size: 1.8em;
-            color: #B22222;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-
-        .order-wa-btn {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            color: white;
-            border: none;
-            padding: 12px 30px;
+            padding: 12px 25px;
             border-radius: 50px;
-            cursor: pointer;
             font-weight: bold;
-            transition: all 0.3s;
-            width: 100%;
-            font-size: 1.1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 3000;
+            display: none;
+            animation: slideUp 0.3s ease;
+            font-size: 0.95em;
+        }
+        
+        @keyframes slideUp {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
         }
 
-        .order-wa-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(37,211,102,0.4);
+        /* Reviews, Gallery, Offers */
+        .reviews-grid, .gallery-grid, .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-
-        /* WhatsApp Contact Section - New Gradient */
+        .review-card {
+            background: #f8f9fa; padding: 20px; border-radius: 12px;
+            border-left: 5px solid #FFA500; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .review-card i { color: #FFA500; margin: 0 2px; }
+        .reviewer { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+        .reviewer img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #B22222; }
+        .gallery-item {
+            border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s; height: 220px;
+        }
+        .gallery-item:hover { transform: scale(1.02); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        .offer-card {
+            background: linear-gradient(135deg, #fff5e6, #fff); padding: 20px; border-radius: 12px;
+            border: 2px dashed #B22222; text-align: center; position: relative;
+        }
+        .offer-tag { background: #B22222; color: white; padding: 4px 15px; border-radius: 50px; font-weight: bold; display: inline-block; margin-bottom: 12px; font-size: 0.9em; }
+        .offer-card h3 { color: #8B0000; font-size: 1.5em; }
+        .offer-validity { color: #666; margin-top: 8px; font-size: 0.85em; }
+        .insta-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;
+        }
+        .insta-item { border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); aspect-ratio: 1/1; }
+        .insta-item img { width: 100%; height: 100%; object-fit: cover; }
+        .floating-wa {
+            position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white;
+            width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2.2em; box-shadow: 0 8px 20px rgba(0,0,0,0.3); z-index: 999;
+            transition: all 0.3s; text-decoration: none;
+        }
+        .floating-wa:hover { transform: scale(1.1); background: #128C7E; }
+        .qr-code {
+            text-align: center; padding: 15px; background: #f8f9fa; border-radius: 12px; max-width: 250px; margin: 0 auto;
+        }
+        .qr-code img { width: 150px; height: 150px; border: 2px solid #B22222; border-radius: 12px; padding: 8px; background: white; }
         .wa-contact-section {
             background: linear-gradient(135deg, #B22222 0%, #8B0000 100%);
-            border-radius: 20px;
-            padding: 50px;
-            color: white;
-            text-align: center;
-            margin: 40px 0;
+            border-radius: 20px; padding: 40px; color: white; text-align: center; margin: 40px 0;
             border: 2px solid #FFA500;
         }
-
-        .wa-contact-section h3 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .wa-contact-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        .wa-number {
-            background: rgba(255,255,255,0.2);
-            padding: 15px 30px;
-            border-radius: 50px;
-            display: inline-block;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            border: 1px solid #FFA500;
-        }
-
-        .direct-wa-btn {
-            background: white;
-            color: #8B0000;
-            border: none;
-            padding: 18px 50px;
-            border-radius: 50px;
-            font-size: 1.3em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .direct-wa-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        /* Responsive */
+        .wa-number { background: rgba(255,255,255,0.2); padding: 12px 25px; border-radius: 50px; display: inline-block; font-size: 1.3em; margin-bottom: 15px; border: 1px solid #FFA500; }
+        .direct-wa-btn { background: white; color: #8B0000; padding: 15px 40px; border-radius: 50px; font-size: 1.2em; font-weight: bold; cursor: pointer; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .direct-wa-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        
         @media (max-width: 992px) {            
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #B22222;
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            }
-            
-            header h1 {
-                font-size: 2.5em;
-            }
-            
-            .header-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .wa-contact-section h3 {
-                font-size: 1.8em;
-            }
-            
-            .wa-number {
-                font-size: 1.1em;
-            }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #B22222; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+            .video-header { height: 450px; }
+            .video-content h1 { font-size: 2.2em; }
+            .video-content p { font-size: 1.1em; }
+            .header-buttons { flex-direction: column; align-items: center; }
         }
+
+        @media (max-width: 576px) {
+            .video-header { height: 350px; }
+            .video-content h1 { font-size: 1.8em; }
+        }
+
+        .structured-data { display: none; }
     </style>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919027038209" class="floating-wa" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div class="toast-message" id="toastMessage">
+        <i class="fas fa-check-circle"></i> Item added to cart!
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=50&h=50&fit=crop" alt="Burger Budds">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=50&h=50&fit=crop" alt="Burger Budds Logo">
                 <div class="logo-text">
                     <h2>Burger Budds</h2>
                     <p>Mathura's Favorite</p>
                 </div>
             </div>
-            
             <div class="nav-links" id="navLinks">
                 <a href="#home"><i class="fas fa-home"></i> Home</a>
                 <a href="#menu"><i class="fas fa-utensils"></i> Menu</a>
-                <a href="#offers"><i class="fas fa-tags"></i> Offers</a>
+                <a href="#special-offers"><i class="fas fa-tags"></i> Offers</a>
+                <a href="#reviews"><i class="fas fa-star"></i> Reviews</a>
                 <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
-                <a href="https://wa.me/917500538556" class="wa-nav-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Order Now
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i> Cart
+                    <span class="cart-count" id="cartCount">0</span>
                 </a>
             </div>
-            
             <div class="mobile-menu-btn" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -455,298 +457,431 @@
     </nav>
 
     <div class="container">
-        <!-- Header Section - Updated with new address -->
-        <header id="home">
-            <h1>Burger Budds</h1>
-            <p>📍 Bhuteshwar Rd, Geeta Enclave, Mathura • 281001</p>
-            <p>🍔 Serving delicious burgers and family meals since 2022</p>
-            <div class="header-buttons">
-                <a href="#menu" class="btn"><i class="fas fa-utensils"></i> View Menu</a>
-                <a href="https://wa.me/917500538556" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+        <!-- Video Header -->
+        <div class="video-header" id="home">
+            <video class="background-video" autoplay muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+                <source src="https://player.vimeo.com/external/370468553.hd.mp4?s=14fbfaa21ed21f0ac8ad3c10e5edcf15f110a958&profile_id=174&oauth2_token_id=57447761" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+            <div class="video-content">
+                <h1>Burger Budds</h1>
+                <p>📍 Bhuteshwar Rd, Geeta Enclave, Mathura • 281001</p>
+                <p>🍔 Serving delicious burgers and family meals since 2022</p>
+                <div class="header-buttons">
+                    <a href="#menu" class="btn"><i class="fas fa-utensils"></i> View Menu</a>
+                    <a href="cart.html" class="btn btn-wa"><i class="fas fa-shopping-cart"></i> View Cart</a>
+                </div>
             </div>
-        </header>
+        </div>
 
-        <!-- Restaurant Info Section - Updated with new details -->
+        <!-- Restaurant Info -->
         <section class="section">
             <h2><i class="fas fa-info-circle"></i> Restaurant Information</h2>
-            <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                <div class="info-card" style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
                     <i class="fas fa-map-marker-alt" style="font-size: 2.5em; color: #B22222; margin-bottom: 15px;"></i>
                     <h3>Location</h3>
-                    <p>Bhuteshwar Rd, Geeta Enclave,<br>Mathura, Uttar Pradesh 281001</p>
-                    <p><a href="https://maps.google.com/?q=27.5005366,77.6665977" target="_blank">View on Google Maps</a></p>
+                    <p>Bhuteshwar Rd, Geeta Enclave,<br>Mathura, UP 281001</p>
+                    <p><a href="https://maps.google.com/?q=27.5005366,77.6665977" target="_blank">View on Maps</a></p>
                 </div>
-                <div class="info-card" style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
                     <i class="fas fa-clock" style="font-size: 2.5em; color: #B22222; margin-bottom: 15px;"></i>
                     <h3>Opening Hours</h3>
-                    <p><strong>Sunday - Saturday</strong><br>11:00 AM – 11:00 PM</p>
+                    <p><strong>Sun - Sat</strong><br>11:00 AM – 11:00 PM</p>
                 </div>
-                <div class="info-card" style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
                     <i class="fas fa-phone-alt" style="font-size: 2.5em; color: #B22222; margin-bottom: 15px;"></i>
                     <h3>Contact</h3>
-                    <p><strong>Phone:</strong> <a href="tel:+917500538556">+91 75005 38556</a></p>
-                    <p><strong>Website:</strong> <a href="http://burgerbuddy.in" target="_blank">burgerbuddy.in</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+919027038209">+91 75005 38556</a></p>
+                    <p><strong>Web:</strong> <a href="http://burgerbuddy.in">burgerbuddy.in</a></p>
                 </div>
             </div>
         </section>
 
-        <!-- Complete Menu Section - Keep same structure but with updated colors -->
+        <!-- Food Gallery -->
+        <section class="section" id="gallery">
+            <h2><i class="fas fa-camera-retro"></i> Food Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1554433607-66b5efe9d304" alt="Sandwich" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.pexels.com/photos/32538756/pexels-photo-32538756.jpeg" alt="Burger + Fries" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=300&fit=crop" alt="Chicken wings" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.pexels.com/photos/34926740/pexels-photo-34926740.jpeg" alt="Milkshake" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.pexels.com/photos/29285460/pexels-photo-29285460.jpeg" alt="Peri fries" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?w=400&h=300&fit=crop" alt="Family meal" loading="lazy"></div>
+            </div>
+        </section>
+
+        <!-- Menu Section with Add to Cart -->
         <section class="section" id="menu">
             <h2><i class="fas fa-utensils"></i> Our Complete Menu</h2>
             
             <!-- Burgers Category -->
-            <h3 style="color: #B22222; margin: 30px 0 20px; font-size: 1.8em;">🍔 Signature Burgers</h3>
+            <h3 style="color: #B22222; margin: 20px 0 15px;">🍔 Signature Burgers</h3>
             <div class="menu-grid">
-                <div class="menu-card" onclick="orderViaWhatsApp('Bombay Cheese Burger', 149)">
+                <div class="menu-card">
                     <span class="menu-badge">Bestseller</span>
                     <div class="menu-icon">🍔</div>
                     <h3>Bombay Cheese Burger</h3>
-                    <p class="menu-desc">Our signature Bombay-style burger with cheese, veggies, and special masala</p>
+                    <p class="menu-desc">Bombay-style with cheese, veggies, masala</p>
                     <div class="menu-price">₹149</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Bombay Cheese Burger', 149)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Bombay Cheese Burger', 149)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Budds Special Chicken', 199)">
+                <div class="menu-card">
                     <span class="menu-badge">Chef's Special</span>
                     <div class="menu-icon">🍔</div>
                     <h3>Budds Special Chicken</h3>
-                    <p class="menu-desc">Grilled chicken patty with lettuce, cheese, and our secret sauce</p>
+                    <p class="menu-desc">Grilled chicken, lettuce, cheese, secret sauce</p>
                     <div class="menu-price">₹199</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Budds Special Chicken', 199)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Budds Special Chicken', 199)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Veggie Supreme', 179)">
+                <div class="menu-card">
                     <div class="menu-icon">🍔</div>
                     <h3>Veggie Supreme</h3>
-                    <p class="menu-desc">Double patty loaded with fresh veggies and melted cheese</p>
+                    <p class="menu-desc">Double patty loaded with fresh veggies</p>
                     <div class="menu-price">₹179</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Veggie Supreme', 179)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Veggie Supreme', 179)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Classic American', 219)">
+                <div class="menu-card">
                     <div class="menu-icon">🍔</div>
                     <h3>Classic American</h3>
-                    <p class="menu-desc">Beef patty with lettuce, tomato, onion, and American cheese</p>
+                    <p class="menu-desc">Beef patty with lettuce, tomato, onion</p>
                     <div class="menu-price">₹219</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Classic American', 219)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Classic American', 219)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Jalapeño Crunch', 189)">
+                <div class="menu-card">
                     <span class="menu-badge">Spicy</span>
                     <div class="menu-icon">🌶️</div>
                     <h3>Jalapeño Crunch</h3>
-                    <p class="menu-desc">Crispy chicken with jalapeños and spicy mayo</p>
+                    <p class="menu-desc">Crispy chicken with jalapeños, spicy mayo</p>
                     <div class="menu-price">₹189</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Jalapeño Crunch', 189)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Jalapeño Crunch', 189)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Double Cheese Supreme', 249)">
+                <div class="menu-card">
                     <div class="menu-icon">🍔</div>
                     <h3>Double Cheese Supreme</h3>
-                    <p class="menu-desc">Double patty with double cheese and special sauce</p>
+                    <p class="menu-desc">Double patty, double cheese, special sauce</p>
                     <div class="menu-price">₹249</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Double Cheese Supreme', 249)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Double Cheese Supreme', 249)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
 
             <!-- Snacks & Sides -->
-            <h3 style="color: #B22222; margin: 40px 0 20px; font-size: 1.8em;">🍟 Snacks & Sides</h3>
+            <h3 style="color: #B22222; margin: 30px 0 15px;">🍟 Snacks & Sides</h3>
             <div class="menu-grid">
-                <div class="menu-card" onclick="orderViaWhatsApp('Peri-Peri Fries', 99)">
+                <div class="menu-card">
                     <span class="menu-badge">Crispy</span>
                     <div class="menu-icon">🍟</div>
                     <h3>Peri-Peri Fries</h3>
                     <p class="menu-desc">Crispy fries tossed in spicy peri-peri seasoning</p>
                     <div class="menu-price">₹99</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Peri-Peri Fries', 99)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Peri-Peri Fries', 99)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Cheese Fries', 129)">
+                <div class="menu-card">
                     <div class="menu-icon">🧀</div>
                     <h3>Cheese Fries</h3>
                     <p class="menu-desc">Loaded with melted cheese and herbs</p>
                     <div class="menu-price">₹129</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Cheese Fries', 129)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Cheese Fries', 129)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Chicken Wings (6 pcs)', 179)">
+                <div class="menu-card">
                     <div class="menu-icon">🍗</div>
                     <h3>Chicken Wings (6 pcs)</h3>
                     <p class="menu-desc">Spicy grilled chicken wings with dip</p>
                     <div class="menu-price">₹179</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Chicken Wings (6 pcs)', 179)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Chicken Wings', 179)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Veg Nuggets (8 pcs)', 89)">
+                <div class="menu-card">
                     <div class="menu-icon">🧆</div>
                     <h3>Veg Nuggets (8 pcs)</h3>
                     <p class="menu-desc">Crispy veg nuggets with schezwan sauce</p>
                     <div class="menu-price">₹89</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Veg Nuggets (8 pcs)', 89)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Veg Nuggets', 89)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
 
             <!-- Beverages -->
-            <h3 style="color: #B22222; margin: 40px 0 20px; font-size: 1.8em;">🥤 Beverages</h3>
+            <h3 style="color: #B22222; margin: 30px 0 15px;">🥤 Beverages</h3>
             <div class="menu-grid">
-                <div class="menu-card" onclick="orderViaWhatsApp('Chocolate Thick Shake', 129)">
+                <div class="menu-card">
                     <span class="menu-badge">Popular</span>
                     <div class="menu-icon">🥤</div>
                     <h3>Chocolate Thick Shake</h3>
                     <p class="menu-desc">Rich and creamy chocolate shake</p>
                     <div class="menu-price">₹129</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Chocolate Thick Shake', 129)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Chocolate Thick Shake', 129)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Mango Smoothie', 119)">
+                <div class="menu-card">
                     <div class="menu-icon">🥭</div>
                     <h3>Mango Smoothie</h3>
                     <p class="menu-desc">Fresh mango blended with yogurt</p>
                     <div class="menu-price">₹119</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Mango Smoothie', 119)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Mango Smoothie', 119)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Strawberry Shake', 129)">
+                <div class="menu-card">
                     <div class="menu-icon">🍓</div>
                     <h3>Strawberry Shake</h3>
                     <p class="menu-desc">Fresh strawberry milkshake</p>
                     <div class="menu-price">₹129</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Strawberry Shake', 129)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Strawberry Shake', 129)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Cold Coffee', 99)">
+                <div class="menu-card">
                     <div class="menu-icon">🥤</div>
                     <h3>Cold Coffee</h3>
                     <p class="menu-desc">Chilled coffee with ice cream</p>
                     <div class="menu-price">₹99</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Cold Coffee', 99)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Cold Coffee', 99)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Masala Lemonade', 79)">
+                <div class="menu-card">
                     <div class="menu-icon">🧋</div>
                     <h3>Masala Lemonade</h3>
                     <p class="menu-desc">Fresh lemonade with Indian spices</p>
                     <div class="menu-price">₹79</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Masala Lemonade', 79)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Masala Lemonade', 79)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Soft Drinks', 49)">
+                <div class="menu-card">
                     <div class="menu-icon">🥤</div>
-                    <h3>Soft Drinks</h3>
-                    <p class="menu-desc">Coke, Sprite, Fanta (500ml)</p>
+                    <h3>Soft Drinks (500ml)</h3>
+                    <p class="menu-desc">Coke, Sprite, Fanta</p>
                     <div class="menu-price">₹49</div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Soft Drinks', 49)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Soft Drinks', 49)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
 
             <!-- Combos -->
-            <h3 style="color: #B22222; margin: 40px 0 20px; font-size: 1.8em;">🍱 Value Combos</h3>
+            <h3 style="color: #B22222; margin: 30px 0 15px;">🍱 Value Combos</h3>
             <div class="menu-grid">
-                <div class="menu-card" onclick="orderViaWhatsApp('Budds Special Combo', 249)">
+                <div class="menu-card">
                     <span class="menu-badge">Save ₹50</span>
                     <div class="menu-icon">🍱</div>
                     <h3>Budds Special Combo</h3>
                     <p class="menu-desc">Bombay Cheese Burger + Peri-Peri Fries + Cold Drink</p>
                     <div class="menu-price">₹249 <span style="font-size: 0.6em; color: #999; text-decoration: line-through;">₹299</span></div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Budds Special Combo', 249)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Budds Special Combo', 249)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Family Feast', 599)">
+                <div class="menu-card">
                     <span class="menu-badge">Family Pack</span>
                     <div class="menu-icon">🍱</div>
                     <h3>Family Feast</h3>
                     <p class="menu-desc">4 Burgers + 2 Fries + 4 Cold Drinks</p>
                     <div class="menu-price">₹599 <span style="font-size: 0.6em; color: #999; text-decoration: line-through;">₹699</span></div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Family Feast', 599)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Family Feast', 599)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
-                <div class="menu-card" onclick="orderViaWhatsApp('Chicken Lover\'s Combo', 349)">
+                <div class="menu-card">
                     <div class="menu-icon">🍱</div>
                     <h3>Chicken Lover's Combo</h3>
                     <p class="menu-desc">Budds Chicken Burger + Chicken Wings + Shake</p>
                     <div class="menu-price">₹349 <span style="font-size: 0.6em; color: #999; text-decoration: line-through;">₹399</span></div>
-                    <button class="order-wa-btn" onclick="event.stopPropagation(); orderViaWhatsApp('Chicken Lover\'s Combo', 349)">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <button class="add-to-cart-btn" onclick="addToCart('Chicken Lover\'s Combo', 349)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- WhatsApp Direct Order Section -->
-        <div class="wa-contact-section" id="offers">
-            <i class="fab fa-whatsapp" style="font-size: 5em; margin-bottom: 20px;"></i>
-            <h3>Order Directly on WhatsApp</h3>
-            <p>Click the button below to start ordering. Send us your favorite items and we'll confirm your order instantly!</p>
-            <div class="wa-number">
-                <i class="fab fa-whatsapp"></i> +91 75005 38556
+        <!-- Customer Reviews -->
+        <section class="section" id="reviews">
+            <h2><i class="fas fa-star"></i> Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <p>"Best burger in Mathura! The Bombay Cheese Burger is out of this world."</p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul">
+                        <div><strong>Rahul Sharma</strong><br>📍 Mathura</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <p>"Amazing peri-peri fries and chicken wings. Great value combos!"</p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya">
+                        <div><strong>Priya Verma</strong><br>📍 Vrindavan</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <p>"I'm a regular here. Quality and taste remain consistent. Highly recommend."</p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Amit">
+                        <div><strong>Amit Kumar</strong><br>📍 Mathura</div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <a href="https://wa.me/917500538556" class="direct-wa-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Start Ordering
-                </a>
-            </div>
-        </div>
+        </section>
 
-        <!-- Location & Map Section - Updated with new coordinates -->
+        <!-- Special Offers -->
+        <section class="section" id="special-offers">
+            <h2><i class="fas fa-gift"></i> Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <span class="offer-tag">BUY 1 GET 1</span>
+                    <h3>🍔 BOGO Burger</h3>
+                    <p>Buy any signature burger & get second free</p>
+                    <p class="offer-validity">Code: BOGO50</p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-tag">20% OFF</span>
+                    <h3>🧀 Family Feast</h3>
+                    <p>Flat 20% off on Family Feast combo</p>
+                    <p class="offer-validity">Weekend special</p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-tag">FREE SHAKE</span>
+                    <h3>🥤 Shake on orders > ₹499</h3>
+                    <p>Add any thick shake for free</p>
+                    <p class="offer-validity">Code: SHAKEON</p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-tag">₹99 DEAL</span>
+                    <h3>🍟 Snack Box</h3>
+                    <p>Peri fries + Veg nuggets + Cold drink</p>
+                    <p class="offer-validity">Limited time</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QR Code Menu -->
+        <section class="section" style="text-align: center;">
+            <h2><i class="fas fa-qrcode"></i> Scan QR Code for Menu</h2>
+            <div class="qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://burgerbuddy.in/menu" alt="QR Code">
+                <p>Scan to view full menu</p>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section class="section" id="instagram">
+            <h2><i class="fab fa-instagram"></i> Follow Us @burgerbudds</h2>
+            <div class="insta-grid">
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41" alt="Insta post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.pexels.com/photos/32538756/pexels-photo-32538756.jpeg" alt="Insta post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop" alt="Insta post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.pexels.com/photos/36495661/pexels-photo-36495661.jpeg" alt="Insta post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41" alt="Insta post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?w=200&h=200&fit=crop" alt="Insta post" loading="lazy"></div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://instagram.com/burgerbudds" target="_blank" class="btn" style="background: #d62976;"><i class="fab fa-instagram"></i> Follow</a>
+            </div>
+        </section>
+
+        <!-- Location & Map -->
         <section class="section" id="contact">
             <h2><i class="fas fa-map-marked-alt"></i> Find Us</h2>
-            <div style="margin-bottom: 20px;">
-                <p><strong>Address:</strong> Bhuteshwar Rd, Geeta Enclave, Mathura, Uttar Pradesh 281001</p>
-                <p><strong>Landmark:</strong> Near Geeta Enclave</p>
-            </div>
-            <iframe 
-                class="map-embed" style="width: 100%; height: 400px; border: none; border-radius: 15px;"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.874891234567!2d77.6665977!3d27.5005366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397371bc5c36c3e1%3A0x2dbf597f06659619!2sBurger%20Budds!5e0!3m2!1sen!2sin!4v1234567890" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+            <p><strong>Address:</strong> Bhuteshwar Rd, Geeta Enclave, Mathura, UP 281001</p>
+            <iframe style="width:100%; height:400px; border:none; border-radius:15px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.874891234567!2d77.6665977!3d27.5005366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397371bc5c36c3e1%3A0x2dbf597f06659619!2sBurger%20Budds!5e0!3m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
         </section>
 
         <!-- Footer -->
-        <footer style="text-align: center; padding: 40px 20px; color: #666;">
+        <footer style="text-align: center; padding: 30px 20px; color: #666;">
             <p>&copy; 2025 Burger Budds, Mathura. All rights reserved.</p>
-            <p style="margin-top: 10px;">
-                <a href="#" style="color: #B22222; text-decoration: none;">Privacy Policy</a> | 
-                <a href="#" style="color: #B22222; text-decoration: none;">Terms of Service</a>
-            </p>
+            <p><a href="#" style="color: #B22222;">Privacy</a> | <a href="#" style="color: #B22222;">Terms</a></p>
         </footer>
     </div>
 
+    <!-- Structured Data -->
+    <script type="application/ld+json" class="structured-data">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Burger Budds",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bhuteshwar Rd, Geeta Enclave",
+        "addressLocality": "Mathura",
+        "addressRegion": "UP",
+        "postalCode": "281001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.5005366,
+        "longitude": 77.6665977
+      },
+      "url": "https://burgerbuddy.in",
+      "telephone": "+919027038209",
+      "priceRange": "₹100 - ₹600"
+    }
+    </script>
+
     <script>
-        // Toggle mobile menu
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+        // Cart functionality - Only for adding items
+        let cart = JSON.parse(localStorage.getItem('burgerBuddsCart')) || [];
+
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
         }
 
-        // Order via WhatsApp function - Updated phone number
-        function orderViaWhatsApp(itemName, price) {
-            const phoneNumber = '917500538556';
-            const message = `Hello Burger Budds, I want to order: %0A%0A• ${itemName} - ₹${price}%0A%0APlease confirm my order.`;
+        function addToCart(itemName, price) {
+            const existingItem = cart.find(item => item.name === itemName);
             
-            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: itemName,
+                    price: price,
+                    quantity: 1,
+                    category: 'item'
+                });
+            }
+            
+            localStorage.setItem('burgerBuddsCart', JSON.stringify(cart));
+            updateCartCount();
+            
+            // Show toast notification
+            const toast = document.getElementById('toastMessage');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
         }
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Initialize cart count on page load
+        document.addEventListener('DOMContentLoaded', updateCartCount);
     </script>
 </body>
 </html>
